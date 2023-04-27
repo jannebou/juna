@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Delay Tracker</title>
+</head>
+<body>
+	<h1>Train Delay Tracker</h1>
+	<form action="/upload" method="post">
+	</form>
+	<br>
+	<table>
+		<tr>
+			<th>Train Number</th>
+			<th>Delay (minutes)</th>
+		</tr>
+		{% for train in train_data %}
+		<tr>
+			<td>{{ train[0] }}</td>
+			<td>{{ train[1] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
